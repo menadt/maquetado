@@ -1,0 +1,15 @@
+/* colores
+    #478050
+    #DBFFE1
+    #8FFFA0
+    #6A8F6F
+    #73CD81*/
+
+.barra{
+    width: 150px;
+    height: 90px;
+}
+
+*{
+    background-color: #478050;
+}
