@@ -1,0 +1,26 @@
+/* colores
+    #478050
+    #DBFFE1
+    #8FFFA0
+    #6A8F6F
+    #73CD81*/
+
+.titulo{
+    background-color: #6A8F6F;
+    color: #FFFFFF;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1.titulo{    
+    /*-webkit-text-stroke: 1px white;*/
+    font-weight: bolder;
+    font-size: 4em;
+}
+
+.arriba{
+    margin-top: -150px;
+}
+
+.transparente{
+    background-color: transparent;
+}

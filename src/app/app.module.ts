@@ -18,6 +18,8 @@ import { HabilidadComponent } from './components/habilidades/habilidad/habilidad
 import { ProyectoComponent } from './components/proyectos/proyecto/proyecto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarreraComponent } from './components/educacion/carrera/carrera.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { CarreraComponent } from './components/educacion/carrera/carrera.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

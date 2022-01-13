@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccesoperfilService } from 'src/app/services/accesoperfil.service';
 
 @Component({
   selector: 'app-titulo',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./titulo.component.css']
 })
 export class TituloComponent implements OnInit {
+  profile:any;
 
-  constructor() { }
+  constructor(private miservicio:AccesoperfilService) { }
 
   ngOnInit(): void {
+    this.miservicio.getDatosPerfil().subscribe(data =>{
+      this.profile=data["perfil"];
+    });
   }
-
 }
