@@ -13,11 +13,7 @@ import { BarraComponent } from './components/header/barra/barra.component';
 import { BannerComponent } from './components/header/banner/banner.component';
 import { ImgProfileComponent } from './components/acerca-de/img-profile/img-profile.component';
 import { TituloComponent } from './components/acerca-de/titulo/titulo.component';
-import { TrabajoComponent } from './components/experiencia/trabajo/trabajo.component';
-import { HabilidadComponent } from './components/habilidades/habilidad/habilidad.component';
-import { ProyectoComponent } from './components/proyectos/proyecto/proyecto.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { CarreraComponent } from './components/educacion/carrera/carrera.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -34,11 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     BannerComponent,
     ImgProfileComponent,
     TituloComponent,
-    TrabajoComponent,
-    HabilidadComponent,
-    ProyectoComponent,
-    FooterComponent,
-    CarreraComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,

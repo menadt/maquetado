@@ -13,5 +13,12 @@ export class AccesoperfilService {
   getDatosPerfil(): Observable<any>{
       return this.http.get('./assets/Data/perfil.json');
   }
+
+  getDatosEducacion(): Observable<any>{
+    return this.http.get('./assets/Data/educacion.json')
+  }
+getDatosExperiencia(): Observable<any>{
+  return this.http.get('./assets/Data/trabajo.json')
+}
   }
 

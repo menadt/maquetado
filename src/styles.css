@@ -9,8 +9,17 @@ body{
     font-family:Arial, Helvetica, sans-serif;
     color: #DBFFE1;
     background:#478050;
+    margin: 0px;
+    padding: 0px;
 }
 
 *{
     background-color: #6A8F6F;
+    margin: 0px;
+    padding: 0px;
+}
+
+.tabla{
+    border-left: 10px solid #DBFFE1;
+    border-top: 3px solid #DBFFE1;
 }

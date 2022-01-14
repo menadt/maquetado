@@ -1,4 +1,17 @@
-<app-carrera></app-carrera>
-<app-carrera></app-carrera>
-<app-carrera></app-carrera>
-<app-carrera></app-carrera>
+<section class="tabla">
+    <h1 style="padding: 25px 50px; font-size: 35px;">Educación</h1>
+    <div class="container">
+        <div *ngFor="let item of educacion" class="row" style="padding-bottom: 2em;">
+            <div class="col-3">
+                <img [src]="item.image" alt="Logo" class="logo">
+            </div>
+            <div class="col-9">
+                <h6 style="font-weight: bold; font-size: 17px;">{{item.title}}</h6>
+                <h6>{{item.institute}}</h6>
+                <h6>Año: {{item.year}} </h6>
+            </div>
+        </div>
+    </div>
+
+
+</section>

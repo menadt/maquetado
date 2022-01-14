@@ -1,0 +1,22 @@
+{
+    "career": [
+        {
+            "title": "Bachiller con Orientación en Informática",
+            "institute": "Escuelas Técnicas ORT",
+            "year": "2001",
+            "image": "https://www.ort.edu.ar/img/LogoOrtArgWeb2017.jpg"
+        },
+        {
+            "title": "Licenciado en Educación Física",
+            "institute": "Universidad Nacional de San Martín",
+            "year": "2018",
+            "image": "https://www.unsam.edu.ar/img/logo-unsam-2020.png"
+        },
+        {
+            "title": "En Curso - Lic. en Cs de Datos",
+            "institute": "Facultad de Cs Exactas, Universidad de Buenos Aires",
+            "year": "En curso",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/Logo_exactas.svg"
+        }
+    ]
+}

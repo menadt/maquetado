@@ -1,0 +1,22 @@
+{
+    "work": [
+        {
+            "rol": "Organización General - Coordinación pedagógica",
+            "institute": "Actividades Moebius",
+            "year": "2008",
+            "image": "https://actividadesmoebius.files.wordpress.com/2020/11/web-cover-1.png"
+        },
+        {
+            "rol": "Profesor de Educación Física",
+            "institute": "Colegio Paideia",
+            "year": "2004",
+            "image": "http://colegiopaideia.edu.ar/new/imgs/logo_new.png"
+        },
+        {
+            "rol": "Organización de eventos deportivos y recreativos",
+            "institute": "BePlus",
+            "year": "2015",
+            "image": "https://beplus.com.ar/images/logobeplus.png"
+        }
+    ]
+}
