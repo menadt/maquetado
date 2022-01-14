@@ -23,5 +23,8 @@ getDatosExperiencia(): Observable<any>{
 getDatosHabilidades(): Observable<any>{
   return this.http.get('./assets/Data/habilidades.json')
 }  
+getDatosProyectos(): Observable<any>{
+  return this.http.get('./assets/Data/proyectos.json')
+}
 }
 

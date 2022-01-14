@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccesoperfilService } from 'src/app/services/accesoperfil.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
-
-  constructor() { }
+proyectos:any;
+  constructor(private miservicio:AccesoperfilService) { }
 
   ngOnInit(): void {
+    this.miservicio.getDatosProyectos().subscribe(data=>{
+      this.proyectos=data["project"];
+    })
   }
 
 }
