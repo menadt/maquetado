@@ -1,0 +1,19 @@
+{
+    "skill": [
+        {
+            "name": "Inglés",
+            "description": "Nivel bajo - intermedio. Conversación fluida",
+            "points": "40"
+        },
+        {
+            "name": "Liderazgo",
+            "description": "Mucha experiencia en conducción de equipos",
+            "points": "95"
+        },
+        {
+            "name": "Empatía",
+            "description": "sarasasara",
+            "points": "92"
+        }
+    ]
+}

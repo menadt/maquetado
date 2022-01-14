@@ -1,1 +1,13 @@
-<p>mis skills </p>
+<section class="tabla">
+    <h1 style="padding: 25px 50px; font-size: 35px;">Habilidades</h1>
+    <div class="container">
+        <div *ngFor="let item of habilidad" class="row" style="padding-bottom: 2em;">
+            <div class="col-3">
+            </div>
+            <div class="col-9">
+                <h6 style="font-weight: bold; font-size: 17px;">{{item.name}}</h6>
+                <h6>{{item.description}}</h6>
+                <h6>Desde el año {{item.points}} </h6>
+            </div>
+        </div>
+    </div>

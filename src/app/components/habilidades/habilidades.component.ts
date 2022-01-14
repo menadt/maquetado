@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccesoperfilService } from 'src/app/services/accesoperfil.service';
 
 @Component({
   selector: 'app-habilidades',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./habilidades.component.css']
 })
 export class HabilidadesComponent implements OnInit {
-
-  constructor() { }
+habilidad: any;
+  constructor(private miservicio:AccesoperfilService) { }
 
   ngOnInit(): void {
+  this.miservicio.getDatosHabilidades().subscribe(data=>{
+    this.habilidad=data["skill"];
+  })
   }
 
 }
