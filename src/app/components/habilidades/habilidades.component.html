@@ -8,6 +8,19 @@
                 <h6 style="font-weight: bold; font-size: 17px;">{{item.name}}</h6>
                 <h6>{{item.description}}</h6>
                 <h6>Desde el año {{item.points}} </h6>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width:80%" aria-valuenow="item.points" aria-valuemin="0"
+                        aria-valuemax="100">{{item.points}}%</div>
+                </div>
+            <button mat-mini-fab color="primary">
+                <mat-icon>edit</mat-icon>
+            </button>
             </div>
+            
         </div>
+        <button mat-mini-fab color="accent">
+            <mat-icon>add</mat-icon>
+        </button>
     </div>
+
+  

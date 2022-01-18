@@ -1,4 +1,4 @@
-<section class="tabla">
+<!--<section class="tabla">
     <h1 style="padding: 25px 50px; font-size: 35px;">Proyectos</h1>
     <div class="container">
         <div *ngFor="let item of proyectos" class="row" style="padding-bottom: 2em;">
@@ -12,4 +12,27 @@
                 <h6>Año: {{item.year}} </h6>
             </div>
         </div>
+    </div>-->
+
+    <div class="contendor">
+    <mat-card class="tarjeta" style="border: 2px solid ;">
+        <mat-card-header>
+            <mat-card-title><h1>Proyectos</h1></mat-card-title>
+            <img mat-card-avatar src="../../../assets/Imagenes/logo2.png"> 
+        </mat-card-header>
+        <mat-card-content *ngFor="let item of proyectos">
+            <mat-card>
+                <mat-card-content ><h6>
+                    {{item.name}} <br>{{item.description}}<br><a [href]="item.url">{{item.url}}</a>
+                    <br>Año: {{item.year}} </h6>
+                </mat-card-content>
+                </mat-card>
+                <button mat-mini-fab color="warn">
+                    <mat-icon>edit</mat-icon>
+                </button>
+        </mat-card-content>
+        <button mat-mini-fab color="accent">
+            <mat-icon>add</mat-icon>
+        </button>
+    </mat-card>
     </div>

@@ -11,10 +11,15 @@ import { HabilidadesComponent } from './components/habilidades/habilidades.compo
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { BarraComponent } from './components/header/barra/barra.component';
 import { BannerComponent } from './components/header/banner/banner.component';
-import { ImgProfileComponent } from './components/acerca-de/img-profile/img-profile.component';
-import { TituloComponent } from './components/acerca-de/titulo/titulo.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SigninComponent } from './components/signin/signin.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -28,14 +33,20 @@ import { HttpClientModule } from '@angular/common/http';
     ProyectosComponent,
     BarraComponent,
     BannerComponent,
-    ImgProfileComponent,
-    TituloComponent,
-    FooterComponent
+    FooterComponent,
+    SigninComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatCardModule,
+    MatButtonModule,
+    FontAwesomeModule,
+    MatIconModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
