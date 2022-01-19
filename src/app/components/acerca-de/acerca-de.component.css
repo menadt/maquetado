@@ -1,0 +1,15 @@
+.redonda{
+    border-radius: 15em;
+}
+
+mat-card button{
+    margin-left: 1em;
+}
+
+mat-card-title{  
+    font-size: 75px;
+}
+
+mat-card-subtitle{
+    font-size: 30px;
+}

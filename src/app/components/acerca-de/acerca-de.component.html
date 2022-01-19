@@ -1,5 +1,4 @@
-<section>
-    <div class="container arriba">
+  <!--  <div class="container arriba">
     <div class="row">
         <ul>
             <li style="display:inline-block;padding-right: 3em;"><img class="imagenredonda" src="../../../../assets/Imagenes/profile.jpg" alt="Imagen de perfil"><button mat-mini-fab color="warn">
@@ -34,3 +33,28 @@
             </div>
         </div>
     </div>
+-->
+<div class="container formato">
+    <mat-card class="formato">
+        <img class="redonda" mat-card-lg-image src="../../../../assets/Imagenes/profile.jpg" alt="Imagen de perfil">
+            <button mat-mini-fab color="primary">
+                <mat-icon>edit</mat-icon>
+            </button>
+        <mat-card-title>{{profile.fullName}}
+            <button mat-mini-fab color="primary">
+             <mat-icon>edit</mat-icon>
+            </button>
+        </mat-card-title>
+            <mat-card-subtitle>{{profile.career}}
+                <button mat-mini-fab color="primary">
+                    <mat-icon>edit</mat-icon>
+                 </button>
+        </mat-card-subtitle>
+            <mat-card-subtitle>{{profile.city}}
+                <button mat-mini-fab color="primary">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </mat-card-subtitle>
+        
+    </mat-card>
+</div>

@@ -9,3 +9,11 @@ color: black;}
 .anchototal{
     width: 100%;
 }
+
+.formato{
+    background-color: transparent;
+}
+
+button {
+    margin-left: 50px;
+}
