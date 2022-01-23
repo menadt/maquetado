@@ -1,5 +1,7 @@
 .redonda{
     border-radius: 15em;
+    position:relative ;
+    border-color: white;
 }
 
 mat-card button{
@@ -12,4 +14,16 @@ mat-card-title{
 
 mat-card-subtitle{
     font-size: 30px;
+}
+div{
+    color: white;
+}
+
+.arriba{
+    margin-top: -30px;
+
+}
+
+.tarjeta{
+    padding-left: 8%;
 }
