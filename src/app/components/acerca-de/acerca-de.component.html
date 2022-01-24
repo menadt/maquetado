@@ -1,60 +1,34 @@
-  <!--  <div class="container arriba">
-    <div class="row">
-        <ul>
-            <li style="display:inline-block;padding-right: 3em;"><img class="imagenredonda" src="../../../../assets/Imagenes/profile.jpg" alt="Imagen de perfil"><button mat-mini-fab color="warn">
+<div class="container arriba">
+    <div>
+        <img class="redonda float-start" mat-card-lg-image src="../../../../assets/Imagenes/profile.jpg" alt="Imagen de perfil"><button
+            mat-mini-fab color="warn">
+            <mat-icon>edit</mat-icon>
+        </button>
+    </div>
+    <div class="row tarjeta">
+        <div class="col d-flex justify-content-left">
+            <p class="h1 display-2" style="font-weight:500;">{{profile.fullName}}</p><button mat-mini-fab color="warn">
                 <mat-icon>edit</mat-icon>
-            </button></li>
-            <li style="display:inline-block;"><h1 class="titulo">{{profile.fullName}}</h1><button mat-mini-fab color="warn">
-                <mat-icon>edit</mat-icon>
-            </button></li>
-            
-
-        </ul>
+            </button></div>
         <div class="row">
-            <div class="col-3 transparente"></div>
-            <div class="col">
-                <h6 class="titulo">{{profile.career}}</h6>
+            <div class="col d-flex justify-content-left">
+                <p class="h4" style="font-weight:400;" >{{profile.career}}</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-3 transparente">
             </div>
-            <div class="col">
-                <p class="titulo">{{profile.city}}</p>
+            <div class="col d-flex justify-content-left">
+                <p class="h4" style="font-weight:400;">{{profile.city}}</p>
             </div>
         </div>
         <div>
             <div class="row">
-                <div class="col-3 transparente">
-                </div>
-            <div class="col"> 
-                <button mat-mini-fab color="primary"><mat-icon>edit</mat-icon></button>
+                
+            <div class="col d-flex justify-content-center"> 
+                <button mat-mini-fab color="warn"><mat-icon>edit</mat-icon></button>
 
             </div>
         </div>
     </div>
--->
-<div class="container formato">
-    <mat-card class="formato">
-        <img class="redonda" mat-card-lg-image src="../../../../assets/Imagenes/profile.jpg" alt="Imagen de perfil">
-            <button mat-mini-fab color="primary">
-                <mat-icon>edit</mat-icon>
-            </button>
-        <mat-card-title>{{profile.fullName}}
-            <button mat-mini-fab color="primary">
-             <mat-icon>edit</mat-icon>
-            </button>
-        </mat-card-title>
-            <mat-card-subtitle>{{profile.career}}
-                <button mat-mini-fab color="primary">
-                    <mat-icon>edit</mat-icon>
-                 </button>
-        </mat-card-subtitle>
-            <mat-card-subtitle>{{profile.city}}
-                <button mat-mini-fab color="primary">
-                    <mat-icon>edit</mat-icon>
-                </button>
-            </mat-card-subtitle>
-        
-    </mat-card>
-</div>
+
+<hr class="solid" style="border-top: 3px solid">
