@@ -1,24 +1,23 @@
-<div class="container">
-    <mat-card>
-        <h1 style="padding: 25px 50px; font-size: 35px;">Educación</h1>
-        <div class="container">
-            <div *ngFor="let item of educacion" class="row" style="padding-bottom: 2em;">
-                <div class="col-2">
-                    <img [src]="item.image" alt="Logo" class="logo">
-                </div>
-                <div class="col-8">
-                    <h6 style="font-weight: bold; font-size: 17px;">{{item.title}}</h6>
-                    <h6>{{item.institute}}</h6>
-                    <h6>Año: {{item.year}} </h6>
-                </div>
-                <div class="col-1">
-                    <button mat-mini-fab color="primary">
-                </button>
+<div class="container-fluid">
+        <p class="h1" style="color: white; margin-left: 60px; margin-bottom: 50px;">Educación</p>
+            <div *ngFor="let item of educacion" class="row tarjeta">
+                    <hr>
+                    <div class="col-3">
+                        <img [src]="item.image" alt="Logo" class="logo">
+                    </div>
+                    <div class="col-8">
+                        <p class="h4" style="font-weight:500;">{{item.title}}</p>
+                        <p class="h6">{{item.institute}}</p>                        
+                        <p class="h6" >Año: {{item.year}}</p>
+                    </div>
+                    <div class="col-1">
+                        <button mat-mini-fab color="primary"><mat-icon>edit</mat-icon>
+                        </button>
+                    </div>
+                
             </div>
-            </div>
-            <button mat-mini-fab color="accent">
+            <button mat-mini-fab color="accent" style="left: 50%;">
                 <mat-icon>add</mat-icon>
             </button>
+        <hr>
         </div>
-    </mat-card>
-</div>
