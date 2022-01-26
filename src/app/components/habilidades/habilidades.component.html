@@ -1,26 +1,19 @@
-<section class="tabla">
-    <h1 style="padding: 25px 50px; font-size: 35px;">Habilidades</h1>
-    <div class="container">
-        <div *ngFor="let item of habilidad" class="row" style="padding-bottom: 2em;">
-            <div class="col-3">
-            </div>
-            <div class="col-9">
-                <h6 style="font-weight: bold; font-size: 17px;">{{item.name}}</h6>
-                <h6>{{item.description}}</h6>
-                <h6>Desde el año {{item.points}} </h6>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width:80%" aria-valuenow="item.points" aria-valuemin="0"
-                        aria-valuemax="100">{{item.points}}%</div>
-                </div>
-            <button mat-mini-fab color="primary">
+<div class="container">
+    <p class="h1" style="color: white; margin-left: 60px; margin-bottom: 50px;">Habilidades</p>
+        <div *ngFor="let item of habilidad" class="row" style="display: inline-block;" >
+            <div class="card" style="margin: 2em;width:300px; height:350px;display: flexbox; align-items: center; padding: 1em;background-color: transparent;">            
+                <p class="card-body card-title h4" style="font-weight:500;">{{item.name}}</p>
+                <p class="card-body h6">{{item.description}}</p>
+                <mat-progress-spinner  mode="determinate" [value]=item.points style="margin-bottom: 10px;"></mat-progress-spinner>
+                <button mat-mini-fab color="warn" class="">
                 <mat-icon>edit</mat-icon>
             </button>
             </div>
-            
         </div>
-        <button mat-mini-fab color="accent">
+
+        <button mat-mini-fab color="accent" style="">
             <mat-icon>add</mat-icon>
         </button>
-    </div>
+</div>
 
   
