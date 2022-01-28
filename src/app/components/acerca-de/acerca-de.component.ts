@@ -8,6 +8,7 @@ import { AccesoperfilService } from 'src/app/services/accesoperfil.service';
 })
 export class AcercaDeComponent implements OnInit {
   profile: any;
+  logueado: boolean = false;
 
   constructor(private miservicio: AccesoperfilService) { }
 

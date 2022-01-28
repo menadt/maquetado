@@ -1,38 +1,27 @@
-<!--<section class="tabla">
-    <h1 style="padding: 25px 50px; font-size: 35px;">Proyectos</h1>
-    <div class="container">
+<div class="container-fluid">
+    <p class="h1 titulofluid"> Proyectos</p>
+    <mat-card style="background-color: transparent;">
         <div *ngFor="let item of proyectos" class="row" style="padding-bottom: 2em;">
-            <div class="col-3">
-            </div>
-            <div class="col-9">
-                <h6 style="font-weight: bold; font-size: 17px;">{{item.name}}</h6>
-                <h6>{{item.description}}</h6>
-                <h6><a [href]="item.url">{{item.url}}</a></h6>
-
-                <h6>Año: {{item.year}} </h6>
-            </div>
-        </div>
-    </div>-->
-
-    <div class="contendor">
-    <mat-card class="tarjeta" style="border: 2px solid ;">
-        <mat-card-header>
-            <mat-card-title><h1>Proyectos</h1></mat-card-title>
-            <img mat-card-avatar src="../../../assets/Imagenes/logo2.png"> 
-        </mat-card-header>
-        <mat-card-content *ngFor="let item of proyectos">
-            <mat-card>
-                <mat-card-content ><h6>
-                    {{item.name}} <br>{{item.description}}<br><a [href]="item.url">{{item.url}}</a>
-                    <br>Año: {{item.year}} </h6>
-                </mat-card-content>
-                </mat-card>
-                <button mat-mini-fab color="warn">
-                    <mat-icon>edit</mat-icon>
-                </button>
-        </mat-card-content>
+            <p class="h4">{{item.name}}</p>
+            <p class="h6">{{item.description}}</p>
+            <p class="h6">{{item.year}}</p>
+            <p class="h6">{{item.url}}</p>
+            <ul class="mdc-image-list my-image-list">
+                <li class="mdc-image-list__item">
+                    <div class="mdc-image-list__image-aspect-container">
+                        <div *ngFor="let foto of item.image">
+                            <img class="mdc-image-list__image" [src]=foto>
+                        </div>
+                    </div>
+                    <div class="mdc-image-list__supporting">
+                        <span class="mdc-image-list__label">{{item.name}}</span>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>        
         <button mat-mini-fab color="accent">
             <mat-icon>add</mat-icon>
         </button>
     </mat-card>
-    </div>
+</div>
