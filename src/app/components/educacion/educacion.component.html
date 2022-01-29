@@ -11,12 +11,12 @@
                         <p class="h6" >Año: {{item.year}}</p>
                     </div>
                     <div class="col-1">
-                        <button mat-mini-fab color="warn"><mat-icon>edit</mat-icon>
+                        <button *ngIf=recibologueado mat-mini-fab color="warn"><mat-icon>edit</mat-icon>
                         </button>
                     </div>
                 
             </div>
-            <button mat-mini-fab color="accent" style="left: 50%;">
+            <button *ngIf=recibologueado mat-mini-fab color="accent" style="left: 50%;">
                 <mat-icon>add</mat-icon>
             </button>
         <hr>

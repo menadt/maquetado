@@ -22,6 +22,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { Output } from '@angular/core';
 
 
 @NgModule({
@@ -57,3 +58,4 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 })
 export class AppModule { 
 }
+

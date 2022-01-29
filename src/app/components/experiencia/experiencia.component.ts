@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AccesoperfilService } from 'src/app/services/accesoperfil.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-experiencia',
@@ -8,6 +9,8 @@ import { AccesoperfilService } from 'src/app/services/accesoperfil.service';
 })
 export class ExperienciaComponent implements OnInit {
 experiencia: any;
+recibologueado=environment.logueado;
+
   constructor(private miservicio:AccesoperfilService) { }
 
   ngOnInit(): void {

@@ -5,13 +5,13 @@
                 <p class="card-body card-title h4" style="font-weight:500;">{{item.name}}</p>
                 <p class="card-body h6">{{item.description}}</p>
                 <mat-progress-spinner  mode="determinate" [value]=item.points style="margin-bottom: 2em;"><p>{{item.points}}</p></mat-progress-spinner>
-                <button mat-mini-fab color="warn" class="">
+                <button *ngIf=recibologueado mat-mini-fab color="warn" class="">
                 <mat-icon>edit</mat-icon>
             </button>
             </div>
         </div>
 
-        <button mat-mini-fab color="accent" style="">
+        <button *ngIf=recibologueado mat-mini-fab color="accent" style="">
             <mat-icon>add</mat-icon>
         </button>
 </div>

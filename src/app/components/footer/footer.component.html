@@ -2,18 +2,18 @@
     <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="mailto:martinmenalled@gmail.com">{{datos.mail}}</a>
          
-        <button mat-mini-fab color="warn">
+        <button *ngIf=recibologueado mat-mini-fab color="warn">
             <mat-icon>edit</mat-icon>
         </button>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="https://api.whatsapp.com/send?phone=1159802100" target="_blank">{{datos.cell}}</a>
-        <button mat-mini-fab color="warn">
+        <button *ngIf=recibologueado mat-mini-fab color="warn">
             <mat-icon>edit</mat-icon>
         </button>
     </li>
     <li>
-        <button mat-mini-fab color="primary">
+        <button *ngIf=recibologueado mat-mini-fab color="primary">
             <mat-icon>add</mat-icon>
         </button>
     </li>

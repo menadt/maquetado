@@ -7,10 +7,10 @@
                         <p class="card-title" style="font-size: large; font-weight: 500;">{{item.rol}}</p>
                         <p class="card-text">{{item.institute}}<br>Desde el año {{item.year}}</p>
                         <a href="#" class="btn btn-primary" style="margin-right: 65px;">Ir a ver</a>
-                        <button mat-mini-fab color="warn" style="margin-right: 10px; justify-self: center">
+                        <button *ngIf=recibologueado mat-mini-fab color="warn" style="margin-right: 10px; justify-self: center">
                             <mat-icon>edit</mat-icon>
                         </button>
-                        <button mat-mini-fab color="basic">
+                        <button *ngIf=recibologueado mat-mini-fab color="basic">
                             <mat-icon>delete</mat-icon>
                         </button>
                     </div>
@@ -18,7 +18,7 @@
                 
 
             </div>
-            <button mat-mini-fab color="accent" style="margin-left: 50px;">
+            <button *ngIf=recibologueado mat-mini-fab color="accent" style="margin-left: 50px;">
                 <mat-icon>add</mat-icon>
             </button>
             <hr>

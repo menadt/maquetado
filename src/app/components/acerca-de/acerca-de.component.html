@@ -1,13 +1,14 @@
 <div class="container arriba">
     <div>
-        <img class="redonda float-start" mat-card-lg-image src="../../../../assets/Imagenes/profile.jpg" alt="Imagen de perfil"><button
-            mat-mini-fab color="warn">
+        <img class="redonda float-start" mat-card-lg-image src="../../../../assets/Imagenes/profile.jpg" alt="Imagen de perfil">
+        <button *ngIf=recibologueado  mat-mini-fab color="warn">
             <mat-icon>edit</mat-icon>
         </button>
     </div>
     <div class="row tarjeta">
         <div class="col d-flex justify-content-left">
-            <p class="h1 display-2" style="font-weight:500;">{{profile.fullName}}</p><button mat-mini-fab color="warn">
+            <p class="h1 display-2" style="font-weight:500;">{{profile.fullName}}</p>
+            <button *ngIf=recibologueado mat-mini-fab color="warn">
                 <mat-icon>edit</mat-icon>
             </button></div>
         <div class="row">
@@ -25,7 +26,7 @@
             <div class="row">
                 
             <div class="col d-flex justify-content-center"> 
-                <button *ngIf="logueado" mat-mini-fab color="warn"><mat-icon>edit</mat-icon></button>
+                <button *ngIf=recibologueado mat-mini-fab color="warn"><mat-icon>edit</mat-icon></button>
 
             </div>
         </div>
