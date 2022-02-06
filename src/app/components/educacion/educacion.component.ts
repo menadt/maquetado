@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class EducacionComponent implements OnInit {
   educacion: any;
-  recibologueado=environment.logueado;
+  recibologueado:any =environment.logueado;
   constructor(private miservicio: AccesoperfilService) { }
 
   ngOnInit(): void {

@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class HabilidadesComponent implements OnInit {
 habilidad: any;
-recibologueado=environment.logueado;
+recibologueado:any =environment.logueado;
 
   constructor(private miservicio:AccesoperfilService) { }
 

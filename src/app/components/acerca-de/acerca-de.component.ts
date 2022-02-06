@@ -8,14 +8,14 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
-  profile: any;
-  recibologueado=environment.logueado;
+  profile: any="";
+  recibologueado:any;
   constructor(private miservicio: AccesoperfilService) { }
 
   ngOnInit(): void {
     this.miservicio.getDatosPerfil().subscribe(data => {
       this.profile = data["perfil"];
-    
+    this.recibologueado=environment.logueado;
     });
   }
 }

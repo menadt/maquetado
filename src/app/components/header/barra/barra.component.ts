@@ -7,11 +7,12 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./barra.component.css']
 })
 export class BarraComponent implements OnInit {
-recibologueado=environment.logueado;
+recibologueado:any;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.recibologueado=environment.logueado;
   }
 
 }
