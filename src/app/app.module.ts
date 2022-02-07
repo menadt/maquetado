@@ -13,7 +13,6 @@ import { BarraComponent } from './components/header/barra/barra.component';
 import { BannerComponent } from './components/header/banner/banner.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SigninComponent } from './components/signin/signin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
@@ -36,7 +35,6 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     BarraComponent,
     BannerComponent,
     FooterComponent,
-    SigninComponent,
   ],
   imports: [
     BrowserModule,

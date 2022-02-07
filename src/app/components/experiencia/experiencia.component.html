@@ -7,10 +7,12 @@
                         <p class="card-title" style="font-size: large; font-weight: 500;">{{item.rol}}</p>
                         <p class="card-text">{{item.institute}}<br>Desde el año {{item.year}}</p>
                         <a href="#" class="btn btn-primary" style="margin-right: 65px;">Ir a ver</a>
-                        <button *ngIf=recibologueado mat-mini-fab color="warn" style="margin-right: 10px; justify-self: center">
+                        <button *ngIf=recibologueado mat-mini-fab color="warn" style="margin-right: 10px; justify-self: center"
+                        type="button" data-bs-toggle="modal" data-bs-target="#experienciaModal">
                             <mat-icon>edit</mat-icon>
                         </button>
-                        <button *ngIf=recibologueado mat-mini-fab color="basic">
+                        <button *ngIf=recibologueado mat-mini-fab color="basic"
+                        type="button" data-bs-toggle="modal" data-bs-target="#borrarExperiencia" >
                             <mat-icon>delete</mat-icon>
                         </button>
                     </div>
@@ -18,9 +20,48 @@
                 
 
             </div>
-            <button *ngIf=recibologueado mat-mini-fab color="accent" style="margin-left: 50px;">
+            <button *ngIf=recibologueado mat-mini-fab color="accent" style="margin-left: 50px;"
+            type="button" data-bs-toggle="modal" data-bs-target="#experienciaModal">
                 <mat-icon>add</mat-icon>
             </button>
             <hr>
+            
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="experienciaModal" tabindex="-1" aria-labelledby="experienciaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="experienciaModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="borrarExperiencia" tabindex="-1" aria-labelledby="borrarExperienciaLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="borrarExperienciaLabel">Borrar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

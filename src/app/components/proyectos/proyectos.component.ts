@@ -7,8 +7,8 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
-proyectos:any;
-recibologueado=environment.logueado;
+proyectos:any="";
+recibologueado:any =environment.logueado;
 
   constructor(private miservicio:AccesoperfilService) { }
 
