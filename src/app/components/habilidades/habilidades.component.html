@@ -5,15 +5,57 @@
                 <p class="card-body card-title h4" style="font-weight:500;">{{item.name}}</p>
                 <p class="card-body h6">{{item.description}}</p>
                 <mat-progress-spinner  mode="determinate" [value]=item.points style="margin-bottom: 2em;"><p>{{item.points}}</p></mat-progress-spinner>
-                <button *ngIf=recibologueado mat-mini-fab color="warn" class="">
-                <mat-icon>edit</mat-icon>
-            </button>
+                <div>
+                <button *ngIf=recibologueado mat-mini-fab color="warn" type="button" data-bs-toggle="modal" data-bs-target="#habilidadModal" style="margin-right: 1em;" >
+                <mat-icon>edit</mat-icon></button>
+                <button *ngIf=recibologueado mat-mini-fab color="basic" type="button" data-bs-toggle="modal"
+                    data-bs-target="#borrarHabilidadModal" >
+                    <mat-icon>delete</mat-icon>
+                
+                </button>
+                </div>
             </div>
         </div>
 
-        <button *ngIf=recibologueado mat-mini-fab color="accent">
+        <button *ngIf=recibologueado style="left: 50%;" mat-mini-fab color="accent" type="button" data-bs-toggle="modal" data-bs-target="#habilidadModal">
             <mat-icon>add</mat-icon>
         </button>
 </div>
 
-  
+<!-- Modal -->
+<div class="modal fade" id="habilidadModal" tabindex="-1" aria-labelledby="habilidadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="habilidadModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="borrarHabilidadModal" tabindex="-1" aria-labelledby="borrarHabilidadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="borrarHabilidadModalLabel">borrar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
