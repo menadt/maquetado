@@ -4,17 +4,17 @@
     </div>
     <div class="row tarjeta">
         <div class="col d-flex justify-content-left">
-            <p class="h1 display-2" style="font-weight:500;">{{profile.fullName}}</p>
+            <p id="fullName" class="h1 display-2" style="font-weight:500;">{{profile.fullName}}</p>
         </div>
             <div class="row">
             <div class="col d-flex justify-content-left">
-                <p class="h4" style="font-weight:400;" >{{profile.career}}</p>
+                <p id="posicion" class="h4" style="font-weight:400;" >{{profile.career}}</p>
             </div>
         </div>
         <div class="row">
             </div>
             <div class="col d-flex justify-content-left">
-                <p class="h4" style="font-weight:400;">{{profile.city}}</p>
+                <p id="ciudad" class="h4" style="font-weight:400;">{{profile.city}}</p>
             </div>
         </div>
         <div>
@@ -22,7 +22,7 @@
                 
             <div class="col d-flex justify-content-center"> 
                 <button *ngIf=recibologueado mat-mini-fab color="warn"
-                type="button" data-bs-toggle="modal" data-bs-target="#educacionModal"><mat-icon>edit</mat-icon></button>
+                type="button" data-bs-toggle="modal" data-bs-target="#AcercaDeModal"><mat-icon>edit</mat-icon></button>
 
             </div>
         </div>
@@ -36,15 +36,53 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="AcercaDeModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="AcercaDeModalLabel">Datos Personales</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                ...
+                <form [formGroup]="form">
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Apellido y Nombre</label>
+                        <input type="text" class="form-control" id="fullName" formControlName="fullName">
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="posicion" class="form-label">Posición</label>
+                        <input type="text" class="form-control" id="posicion" formControlName="posicion">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ciudad" class="form-label">Lugar de Residencia</label>
+                        <input type="text" class="form-control" id="ciudad" formControlName="ciudad">
+                    </div>
+                    <div class="mb-3">
+                        <label for="correo" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="correo" formControlName="correo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" id="telefono" formControlName="telefono">
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaDeNacimiento" class="form-label">Fecha de fechaDeNacimiento</label>
+                        <input type="date" class="form-control" id="fechaDeNacimiento" formControlName="fechaDeNacimiento">
+                    </div>
+                    <div class="mb-3">
+                        <label for="github" class="form-label">GitHub</label>
+                        <input type="text" class="form-control" id="github" formControlName="github">
+                    </div>
+                    <div class="mb-3">
+                        <label for="linkedin" class="form-label">LinkedIn</label>
+                        <input type="text" class="form-control" id="linkedin" formControlName="linkedin">
+                    </div>
+                    <div class="mb-3">
+                        <label for="url_foto" class="form-label">URL Foto de Perfil</label>
+                        <input type="text" class="form-control" id="url_foto" formControlName="url_foto">
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" id="cerrarModalAcerca" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" (click)="guardarFormulario()">Guardar</button>
             </div>
         </div>
     </div>
