@@ -39,41 +39,58 @@
     </mat-card>
 </div>
 
-<!-- Modal -->
+<!-- Modal editar agregar-->
 <div class="modal fade" id="proyectosModal" tabindex="-1" aria-labelledby="proyectosModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="proyectosModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="proyectosModalLabel">Proyecto</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                ...
+                <form [formGroup]="form">
+                    <div class="mb-3">
+                        <label for="nombreProyecto" class="form-label">Proyecto</label>
+                        <input type="text" class="form-control" id="nombreProyecto" formControlName="nombreProyecto">
+                
+                    </div>
+                    <div class="mb-3">
+                        <label for="anio" class="form-label">Año</label>
+                        <input type="text" class="form-control" id="anio" formControlName="anio">
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Descripcion del trabajo</label>
+                        <input type="text" class="form-control" id="descripcion" formControlName="descripcion">
+                    </div>
+                    <div class="mb-3">
+                        <label for="url" class="form-label">URL del proyecto</label>
+                        <input type="text" class="form-control" id="url" formControlName="url">
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Guardar</button>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Modal -->
+<!-- Modal borrar -->
 <div class="modal fade" id="borrarproyectosModal" tabindex="-1" aria-labelledby="borrarproyectosModalLabel"
     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="borrarproyectosModalLabel">borrar</h5>
+                <h5 class="modal-title" id="borrarproyectosModalLabel">Borrar Proyecto</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                ...
-            </div>
+                <label for="confirmar" class="form-label">¿Estás Segurx?</label>
+                <input type="text" class="form-control" id="confirmar" formControlName="confirmar"></div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+                <button type="button" class="btn btn-primary">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button></div>
         </div>
     </div>
 </div>

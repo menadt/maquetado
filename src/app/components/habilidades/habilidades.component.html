@@ -22,16 +22,30 @@
         </button>
 </div>
 
-<!-- Modal -->
+<!-- Modal agregar Editar-->
 <div class="modal fade" id="habilidadModal" tabindex="-1" aria-labelledby="habilidadModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="habilidadModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="habilidadModalLabel">Habilidad</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                ...
+                <form [formGroup]="form">
+                    <div class="mb-3">
+                        <label for="nombreHabilidad" class="form-label">Habilidad</label>
+                        <input type="text" class="form-control" id="nombreHabilidad" formControlName="nombreHabilidad">
+                
+                    </div>
+                    <div class="mb-3">
+                        <label for="puntuacion" class="form-label">Puntuación</label>
+                        <input type="text" class="form-control" id="puntuacion" formControlName="puntuacion">
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Descripcion del trabajo</label>
+                        <input type="text" class="form-control" id="descripcion" formControlName="descripcion">
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -41,20 +55,21 @@
     </div>
 </div>
 
-<!-- Modal -->
+<!-- Modal borrar-->
 <div class="modal fade" id="borrarHabilidadModal" tabindex="-1" aria-labelledby="borrarHabilidadModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="borrarHabilidadModalLabel">borrar</h5>
+                <h5 class="modal-title" id="borrarHabilidadModalLabel">Borrar Habilidad</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                ...
+                <label for="confirmar" class="form-label">¿Estás Segurx?</label>
+                <input type="text" class="form-control" id="confirmar" formControlName="confirmar">
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
             </div>
         </div>
     </div>
