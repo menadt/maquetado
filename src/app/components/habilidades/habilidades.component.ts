@@ -16,7 +16,7 @@ form!: FormGroup;
   constructor(private miservicio:AccesoperfilService, private formBuilder:FormBuilder) { 
     this.form=this.formBuilder.group({
       nombreHabilidad:['', Validators.required],
-      puntuacion: ['', Validators.required],
+      puntuacion: ['', [Validators.required,Validators.min(1), Validators.max(10)]],
       descripcion: ['']
     })
   }
@@ -26,5 +26,25 @@ form!: FormGroup;
     this.habilidad=data["skill"];
   })
   }
-
+  guardarFormulario() {
+    if (this.form.valid) {
+      alert("Formulario valido");
+      this.form.reset();
+      document.getElementById("cerrarHabilidadesModal")?.click();
+    }
+    else {
+      this.form.markAllAsTouched();
+      alert("hay errores");
+    }
+  }
+  get nombreHabilidad()
+    {
+      return this.form.get("nombreHabilidad");
+    }
+  get puntuacion(){
+    return this.form.get("puntuacion");
+  }
+  get descripcion (){
+    return this.form.get("descripcion");
+  }
 }
