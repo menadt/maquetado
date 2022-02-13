@@ -82,10 +82,13 @@
             </div>
             <div class="modal-body">
                 <label for="confirmar" class="form-label">¿Estás Segurx?</label>
-                <input type="text" class="form-control" id="confirmar" formControlName="confirmar">
+                <select class="form-control" id="confirmar" formControlName="confirmar">
+                    <option value="1">Sí</option>
+                    <option value="0">No</option>
+                </select>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Guardar</button>
+                <button type="button" class="btn btn-primary" (click)="borrarHabilidad()">Guardar</button>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
             </div>
         </div>
