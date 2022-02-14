@@ -14,7 +14,7 @@ form!: FormGroup;
   constructor(private miservicio:AccesoperfilService, private formBuilder: FormBuilder) { 
     this.form=this.formBuilder.group({
       nombreProyecto: ['', Validators.required],
-      anio: ['', Validators.required],
+      anio: ['', [Validators.required,Validators.min(1960)]],
       descripcion: ['', Validators.required],
       url: ['']
     })
@@ -26,4 +26,30 @@ form!: FormGroup;
     })
   }
 
+  guardarFormulario() {
+    if (this.form.valid) {
+      alert("Formulario valido");
+      document.getElementById("cerrarFormularioproyecto")?.click();
+    }
+    else {
+      this.form.markAllAsTouched();
+      alert("hay errores");
+    }
+  }
+  resetearFormulario() {
+    this.form.reset();
+  }
+
+  get nombreProyecto(){
+    return this.form.get("nombreProyecto");
+  }
+  get anio  (){
+    return this.form.get("anio");
+  }
+  get descripcion(){
+    return this.form.get("descripcion");
+  }
+  get url(){
+    return this.form.get("url");
+  }
 }

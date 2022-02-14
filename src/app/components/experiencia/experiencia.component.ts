@@ -20,7 +20,9 @@ form!: FormGroup;
       esActual:['', Validators.required],
       fechaInicio:['', Validators.required],
       fechaFinal:[''],
-      descripcion:['', Validators.required]
+      descripcion:['', Validators.required],
+      urlInstitucion:[''],
+      urlLogo:['']
     })
 }
 
@@ -34,11 +36,35 @@ form!: FormGroup;
       if (this.form.valid) {
         alert("Formulario valido");
         this.form.reset();
-        document.getElementById("cerrarModalAcerca")?.click();
+        document.getElementById("cerrarFormularioExperiencia")?.click();
       }
       else {
         this.form.markAllAsTouched();
         alert("hay errores");
       }
     }
+  resetearFormulario(){
+    this.form.reset();
+  }
+  get nombreInstitucion() {
+    return this.form.get("nombreInstitucion");
+  }
+  get esActual(){
+    return this.form.get("esActual");
+  }
+  get fechaInicio(){
+    return this.form.get("fechaInicio");
+  }
+  get fechaFinal(){
+    return this.form.get("fechaFinal");
+  }
+  get descripcion(){
+    return this.form.get("descripcion");
+  }
+  get urlInstitucion(){
+    return this.form.get("urlInstitucion");
+  }
+  get urlLogo() {
+    return this.form.get("urlLogo");
+  }
   }

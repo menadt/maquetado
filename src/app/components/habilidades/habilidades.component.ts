@@ -42,7 +42,7 @@ form!: FormGroup;
   }
   
   resetearFormulario(){
-    this.form.markAsUntouched();
+    this.form.reset();
   }
   get nombreHabilidad()
     {

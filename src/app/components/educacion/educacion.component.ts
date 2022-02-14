@@ -20,7 +20,8 @@ export class EducacionComponent implements OnInit {
       recibido: ['', Validators.required],
       fechaInicio: ['', Validators.required],
       fechaFinal: [''],
-      nombreInstitucion: ['', Validators.required]
+      nombreInstitucion: ['', Validators.required],
+      logoInstitucion:['']
 
     })
     
@@ -43,7 +44,7 @@ export class EducacionComponent implements OnInit {
     }
   }
   resetearFormulario(){
-    this.form.markAsUntouched();
+    this.form.reset();
   }
   borrarEducacion() {
     alert("Título Borrado");

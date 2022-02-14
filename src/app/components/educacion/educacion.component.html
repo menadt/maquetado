@@ -42,7 +42,7 @@
                     <form [formGroup]="form">
                         <div class="mb-3">
                             <label for="titulo" class="form-label">Título de la carrera</label>
-                            <input type="text" class="form-control" id="titulo" formControlName="titulo">
+                            <input type="text" class="form-control" id="titulo" formControlName="titulo" placeholder="Título">
                             <div *ngIf="titulo?.invalid && (titulo?.touched)" class="text-danger">
                                 Es obligatorio completar el título.
                             </div>
@@ -70,14 +70,14 @@
                         </div>
                         <div class="mb-3">
                             <label for="nombreInstitucion" class="form-label">Institución Educativa</label>
-                            <input type="text" class="form-control" id="nombreInstitucion" formControlName="nombreInstitucion">
+                            <input type="text" class="form-control" id="nombreInstitucion" formControlName="nombreInstitucion" placeholder="Institución educativa">
                             <div *ngIf="nombreInstitucion?.invalid && (nombreInstitucion?.touched)" class="text-danger">
                                 Debe indicar el nombre de la institucion.
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="logoInstitucion" class="form-label">Logo Institucion</label>
-                            <input type="text" class="form-control" id="logoInstitucion" formControlName="logoInstitucion">
+                            <input type="text" class="form-control" id="logoInstitucion" formControlName="logoInstitucion" placeholder="http://">
                         </div>
                     </form>
                 </div>

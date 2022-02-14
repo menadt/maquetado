@@ -4,19 +4,22 @@
             "rol": "Organización General - Coordinación pedagógica",
             "institute": "Actividades Moebius",
             "year": "2008",
-            "image": "https://actividadesmoebius.files.wordpress.com/2020/11/web-cover-1.png"
+            "image": "https://actividadesmoebius.files.wordpress.com/2020/11/web-cover-1.png",
+            "url": "https://actividadesmoebius.com/"
         },
         {
             "rol": "Profesor de Educación Física",
             "institute": "Colegio Paideia",
             "year": "2004",
-            "image": "http://www.orientapadres.com.ar/institucion/105/colegio-paideia/logo"
+            "image": "http://www.orientapadres.com.ar/institucion/105/colegio-paideia/logo",
+            "url": "http://www.colegiopaideia.edu.ar/new/index.php"
         },
         {
             "rol": "Organización de eventos deportivos y recreativos",
             "institute": "BePlus",
             "year": "2015",
-            "image": "https://beplus.com.ar/images/logo-footer.png"
+            "image": "https://beplus.com.ar/images/logo-footer.png",
+            "url":"https://beplus.com.ar/"
         }
     ]
 }

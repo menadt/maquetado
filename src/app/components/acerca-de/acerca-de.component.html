@@ -37,30 +37,38 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="AcercaDeModalLabel">Datos Personales</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="cerrarModalAcerca" (click)="resetearFormulario()"></button>
             </div>
             <div class="modal-body">
                 <form [formGroup]="form">
                     <div class="mb-3">
                         <label for="fullName" class="form-label">Apellido y Nombre</label>
-                        <input type="text" class="form-control" id="fullName" formControlName="fullName">
-                        
+                        <input type="text" class="form-control" id="fullName" formControlName="fullName" placeholder="Nombre y Apellido">
+                        <div *ngIf="fullName?.invalid && (fullName?.touched)" class="text-danger">
+                            Debe completar el Nombre y Apellido.
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="posicion" class="form-label">Posición</label>
-                        <input type="text" class="form-control" id="posicion" formControlName="posicion">
+                        <input type="text" class="form-control" id="posicion" formControlName="posicion" placeholder="Posición">
                     </div>
                     <div class="mb-3">
                         <label for="ciudad" class="form-label">Lugar de Residencia</label>
-                        <input type="text" class="form-control" id="ciudad" formControlName="ciudad">
+                        <input type="text" class="form-control" id="ciudad" formControlName="ciudad" placeholder="Ciudad de residencia">
                     </div>
                     <div class="mb-3">
                         <label for="correo" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="correo" formControlName="correo">
+                        <input type="email" class="form-control" id="correo" formControlName="correo" placeholder="example@example.com">
+                        <div *ngIf="correo?.invalid && (correo?.touched)" class="text-danger">
+                            Debe indicar un correo electrónico válido.
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="telefono" class="form-label">Teléfono</label>
-                        <input type="text" class="form-control" id="telefono" formControlName="telefono">
+                        <input type="text" class="form-control" id="telefono" formControlName="telefono" placeholder="XXXX - XXXX - XXXX">
+                        <div *ngIf="telefono?.invalid && (telefono?.touched)" class="text-danger">
+                            Debe indicar un teléfono celular.
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="fechaDeNacimiento" class="form-label">Fecha de fechaDeNacimiento</label>
@@ -68,20 +76,20 @@
                     </div>
                     <div class="mb-3">
                         <label for="github" class="form-label">GitHub</label>
-                        <input type="text" class="form-control" id="github" formControlName="github">
+                        <input type="text" class="form-control" id="github" formControlName="github" placeholder="https://github.com/example">
                     </div>
                     <div class="mb-3">
                         <label for="linkedin" class="form-label">LinkedIn</label>
-                        <input type="text" class="form-control" id="linkedin" formControlName="linkedin">
+                        <input type="text" class="form-control" id="linkedin" formControlName="linkedin" placeholder="https://www.linkedin.com/in/example">
                     </div>
                     <div class="mb-3">
                         <label for="url_foto" class="form-label">URL Foto de Perfil</label>
-                        <input type="text" class="form-control" id="url_foto" formControlName="url_foto">
+                        <input type="text" class="form-control" id="url_foto" formControlName="url_foto" placeholder="http://">
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" id="cerrarModalAcerca" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" id="cerrarModalAcerca" class="btn btn-secondary" data-bs-dismiss="modal" (click)="resetearFormulario()">Cancelar</button>
                 <button type="button" class="btn btn-primary" (click)="guardarFormulario()">Guardar</button>
             </div>
         </div>

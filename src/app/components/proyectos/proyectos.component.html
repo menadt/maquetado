@@ -14,11 +14,12 @@
                         </div>
                     </div>
                     <div class="mdc-image-list__supporting">
-                        <span class="mdc-image-list__label">{{item.name}}</span>
+                        <span class="mdc-image-list__label"><p>{{item.name}}</p></span>
                     </div>
                 </li>
                 
             </ul>
+            
             <div>
                 <button *ngIf=recibologueado mat-mini-fab color="warn" type="button" data-bs-toggle="modal"
                     data-bs-target="#proyectosModal" style="margin-right: 1em;">
@@ -45,32 +46,45 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="proyectosModalLabel">Proyecto</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="cerrarFormularioproyecto" (click)="resetearFormulario()"></button>
             </div>
             <div class="modal-body">
                 <form [formGroup]="form">
                     <div class="mb-3">
                         <label for="nombreProyecto" class="form-label">Proyecto</label>
-                        <input type="text" class="form-control" id="nombreProyecto" formControlName="nombreProyecto">
-                
+                        <input type="text" class="form-control" id="nombreProyecto" formControlName="nombreProyecto" placeholder="Nombre del Proyecto">
+                        <div *ngIf="nombreProyecto?.invalid && (nombreProyecto?.touched)" class="text-danger">
+                            Debe completar un nombre para el proyecto.
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="anio" class="form-label">Año</label>
-                        <input type="text" class="form-control" id="anio" formControlName="anio">
+                        <input type="number" min="1960" inputmode="numeric" class="form-control" id="anio" formControlName="anio" placeholder="YYYY">
+                        <div *ngIf="anio?.invalid && (anio?.touched)" class="text-danger">
+                            <div *ngIf="anio?.errors?.['required']" class="text-danger">
+                                El año es obligatorio.
+                            </div>
+                            <div *ngIf="anio?.errors?.['min']" class="text-danger">
+                                El año debe ser válido (superior a "1960").
+                            </div>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="descripcion" class="form-label">Descripcion del trabajo</label>
-                        <input type="text" class="form-control" id="descripcion" formControlName="descripcion">
+                        <input type="text" class="form-control" id="descripcion" formControlName="descripcion" placeholder="Descripción del proyecto">
+                        <div *ngIf="descripcion?.invalid && (descripcion?.touched)" class="text-danger">
+                            Debe completar una descripción.
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="url" class="form-label">URL del proyecto</label>
-                        <input type="text" class="form-control" id="url" formControlName="url">
+                        <input type="text" class="form-control" id="url" formControlName="url" placeholder="http://">
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="resetearFormulario()">Cancelar</button>
+                <button type="button" class="btn btn-primary" (click)="guardarFormulario()">Guardar</button>
             </div>
         </div>
     </div>

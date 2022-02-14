@@ -19,8 +19,8 @@ export class AcercaDeComponent implements OnInit {
       fullName: ['', [Validators.required]],
       posicion: [''],
       ciudad: [''],
-      correo:['',[Validators.email]],
-      telefono:['',[Validators.minLength(10)]],
+      correo:['',[Validators.required, Validators.email]],
+      telefono: ['', [Validators.required, Validators.minLength(10)]],
       fechaDeNacimiento:[''],
       github: [''],
       linkedin: [''],
@@ -44,5 +44,35 @@ export class AcercaDeComponent implements OnInit {
       this.form.markAllAsTouched();
       alert("hay errores"); 
     }
+  }
+  resetearFormulario(){
+    this.form.reset();
+  }
+  get fullName(){
+    return this.form.get("fullName");
+  }
+  get posicion(){
+    return this.form.get("posicion");
+  }
+  get ciudad(){
+    return this.form.get("ciudad");
+  }
+  get correo(){
+    return this.form.get("correo");
+  }
+  get telefono(){
+    return this.form.get("telefono");
+  }
+  get fechaDeNacimiento(){
+    return this.form.get("fechaDeNacimiento");
+  }
+  get github(){
+    return this.form.get("github");
+  }
+  get linkedin (){
+    return this.form.get("linkedin");
+  }
+  get url_foto (){
+    return this.form.get("url_foto");
   }
 }
