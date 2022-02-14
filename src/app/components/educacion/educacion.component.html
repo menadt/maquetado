@@ -76,8 +76,8 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="urlFotoInstitucion" class="form-label">Logo Institucion</label>
-                            <input type="file" class="form-control" id="urlFotoInstitucion" formControlName="urlFotoInstitucion">
+                            <label for="logoInstitucion" class="form-label">Logo Institucion</label>
+                            <input type="text" class="form-control" id="logoInstitucion" formControlName="logoInstitucion">
                         </div>
                     </form>
                 </div>
@@ -99,13 +99,11 @@
                 </div>
                 <div class="modal-body">
                     <label for="confirmar" class="form-label">¿Estás Segurx?</label>
-                    <select class="form-control" id="confirmar" formControlName="confirmar">
-                        <option value="1">Sí</option>
-                    </select>
+                    
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" (click)="borrarEducacion()">Aceptar</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" (click)="borrarEducacion()">Sí</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
                  </div>
             </div>
         </div>
