@@ -31,5 +31,37 @@ export class EducacionComponent implements OnInit {
       this.educacion = data["career"]
     })
   }
+  guardarFormulario() {
+    if (this.form.valid) {
+      alert("Formulario valido");
+      this.form.reset();
+      document.getElementById("cerrarEducacionModal")?.click();
+    }
+    else {
+      this.form.markAllAsTouched();
+      alert("hay errores");
+    }
+  }
+  resetearFormulario(){
+    this.form.markAsUntouched();
+  }
+  borrarEducacion() {
+    alert("Título Borrado");
+  }
+  get titulo(){
+    return this.form.get("titulo");
+  }
+  get recibido(){
+    return this.form.get("recibido");
 
+  }
+  get fechaInicio (){
+    return this.form.get("fechaInicio");
+  }
+  get fechaFinal (){
+    return this.form.get("fechaFinal");
+  }
+  get nombreInstitucion (){
+    return this.form.get("nombreInstitucion");
+  }
 }

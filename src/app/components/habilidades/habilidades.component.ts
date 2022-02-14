@@ -37,6 +37,13 @@ form!: FormGroup;
       alert("hay errores");
     }
   }
+  borrarHabilidad(){
+    alert("Formulario Borrado");
+  }
+  
+  resetearFormulario(){
+    this.form.markAsUntouched();
+  }
   get nombreHabilidad()
     {
       return this.form.get("nombreHabilidad");
