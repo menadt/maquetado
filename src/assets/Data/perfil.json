@@ -1,10 +1,14 @@
 {
     "perfil": {
         "fullName": "Martín Menalled",
-        "career": "Full Stack Developer Jr.",
+        "posicion": "Full Stack Developer Jr.",
         "description": "",
-        "city": "Ciudad de Buenos Aires, Argentina",
-        "mail": "martinmenalled@gmail.com",
-        "cell": "1159802100"
+        "ciudad": "Ciudad de Buenos Aires, Argentina",
+        "correo": "martinmenalled@gmail.com",
+        "telefono": "1159802100",
+        "fechaDeNacimiento": "1984-05-21",
+        "github":"https://github.com/menadt",
+        "linkedin":"https://www.linkedin.com/in/martinmenalled/",
+        "url_foto": "http://localhost:4200/assets/Imagenes/profile.jpg"
     }
 }

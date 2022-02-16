@@ -1,6 +1,8 @@
 import {HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Habilidad } from '../entidades/habilidad';
+import { Persona } from '../entidades/persona';
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +28,11 @@ getDatosHabilidades(): Observable<any>{
 getDatosProyectos(): Observable<any>{
   return this.http.get('./assets/Data/proyectos.json')
 }
+editarHabilidad(habilidad:Habilidad): Observable<any>{
+  return this.http.post('http://localhost:3000/posts', habilidad)
+}
+editarDatosPersona(persona: Persona): Observable<any> {
+    return this.http.post('http://localhost:3000/posts', persona);
+  }
 }
 

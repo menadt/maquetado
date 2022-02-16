@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccesoperfilService } from 'src/app/services/accesoperfil.service';
 import { environment } from 'src/environments/environment';
+import { Persona } from 'src/app/entidades/persona';
 
 
 @Component({
@@ -47,6 +48,17 @@ export class AcercaDeComponent implements OnInit {
   }
   resetearFormulario(){
     this.form.reset();
+  }
+  mostrarDatosEncabezado() {
+    this.form.get("fullName")?.setValue(this.profile.fullName);
+    this.form.get("posicion")?.setValue(this.profile.posicion);
+    this.form.get("ciudad")?.setValue(this.profile.ciudad);
+    this.form.get("url_foto")?.setValue(this.profile.url_foto);
+    this.form.get("correo")?.setValue(this.profile.correo);
+    this.form.get("telefono")?.setValue(this.profile.telefono);
+    this.form.get("fechaDeNacimiento")?.setValue(this.profile.fechaDeNacimiento);
+    this.form.get("github")?.setValue(this.profile.github);
+    this.form.get("linkedin")?.setValue(this.profile.linkedin)
   }
   get fullName(){
     return this.form.get("fullName");

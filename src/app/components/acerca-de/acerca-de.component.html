@@ -8,13 +8,13 @@
         </div>
             <div class="row">
             <div class="col d-flex justify-content-left">
-                <p id="posicion" class="h4" style="font-weight:400;" >{{profile.career}}</p>
+                <p id="posicion" class="h4" style="font-weight:400;" >{{profile.posicion}}</p>
             </div>
         </div>
         <div class="row">
             </div>
             <div class="col d-flex justify-content-left">
-                <p id="ciudad" class="h4" style="font-weight:400;">{{profile.city}}</p>
+                <p id="ciudad" class="h4" style="font-weight:400;">{{profile.ciudad}}</p>
             </div>
         </div>
         <div>
@@ -22,7 +22,8 @@
                 
             <div class="col d-flex justify-content-center"> 
                 <button *ngIf=recibologueado mat-mini-fab color="warn"
-                type="button" data-bs-toggle="modal" data-bs-target="#AcercaDeModal"><mat-icon>edit</mat-icon></button>
+                type="button" data-bs-toggle="modal" data-bs-target="#AcercaDeModal"
+                (click)="mostrarDatosEncabezado()"><mat-icon>edit</mat-icon></button>
 
             </div>
         </div>
