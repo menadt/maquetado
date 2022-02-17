@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccesoperfilService } from 'src/app/services/accesoperfil.service';
 import { environment } from 'src/environments/environment';
-import { Habilidad } from 'src/app/entidades/habilidad';
 @Component({
   selector: 'app-habilidades',
   templateUrl: './habilidades.component.html',
@@ -23,7 +22,7 @@ form!: FormGroup;
 
   ngOnInit(): void {
   this.miservicio.getDatosHabilidades().subscribe(data=>{
-    this.habilidad=data["skill"];
+    this.habilidad=data["habilidad"];
   })
   }
   guardarFormulario() {
@@ -54,10 +53,10 @@ form!: FormGroup;
   get descripcion (){
     return this.form.get("descripcion");
   }
-  mostrarHabilidad(hab: Habilidad){
-    this.form.get("nombreHabilidad")?.setValue(hab.nombreHabilidad);
-    this.form.get("puntuacion")?.setValue(hab.puntuacion);
-    this.form.get("descripcion")?.setValue(hab.descripcion);
+  mostrarHabilidad(item:any){
+    this.form.get("nombreHabilidad")?.setValue(this.habilidad[item].nombreHabilidad);
+    this.form.get("puntuacion")?.setValue(this.habilidad[item].puntuacion);
+    this.form.get("descripcion")?.setValue(this.habilidad[item].descripcion);
 
   }
 }

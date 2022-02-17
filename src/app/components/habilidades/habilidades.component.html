@@ -1,12 +1,12 @@
 <div class="container-fluid">
     <p class="h1 titulofluid">Habilidades</p>
-        <div *ngFor="let item of habilidad" class="row" style="display: inline-block; margin-left: 3em;" >
+        <div *ngFor="let item of habilidad;let indice=index" class="row" style="display: inline-block; margin-left: 3em;" >
             <div class="card" style="margin: 2em;width:300px; height:400px;display: flexbox; align-items: center; padding: 1em;background-color: transparent;">            
-                <p class="card-body card-title h4" style="font-weight:500;">{{item.name}}</p>
-                <p class="card-body h6">{{item.description}}</p>
-                <mat-progress-spinner  mode="determinate" [value]=item.points style="margin-bottom: 2em;"><p>{{item.points}}</p></mat-progress-spinner>
+                <p class="card-body card-title h4" style="font-weight:500;">{{item.nombreHabilidad}}</p>
+                <p class="card-body h6">{{item.descripcion}}</p>
+                <mat-progress-spinner  mode="determinate" [value]=item.puntuacion*10 style="margin-bottom: 2em;"><p>{{item.puntuacion}}</p></mat-progress-spinner>
                 <div>
-                <button (click)="mostrarHabilidad(item)" *ngIf=recibologueado mat-mini-fab color="warn" type="button" data-bs-toggle="modal" data-bs-target="#habilidadModal" style="margin-right: 1em;" >
+                <button (click)="mostrarHabilidad(indice)" *ngIf=recibologueado mat-mini-fab color="warn" type="button" data-bs-toggle="modal" data-bs-target="#habilidadModal" style="margin-right: 1em;" >
                 <mat-icon>edit</mat-icon></button>
                 <button *ngIf=recibologueado mat-mini-fab color="basic" type="button" data-bs-toggle="modal"
                     data-bs-target="#borrarHabilidadModal" >
