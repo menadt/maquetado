@@ -1,20 +1,20 @@
 <div class="container-fluid">
     <p class="h1 titulofluid"> Proyectos</p>
     <mat-card style="background-color: transparent;">
-        <div *ngFor="let item of proyectos" class="row" style="padding-bottom: 2em;">
-            <p class="h4">{{item.name}}</p>
-            <p class="h6">{{item.description}}</p>
-            <p class="h6">{{item.year}}</p>
-            <p class="h6">{{item.url}}</p>
+        <div *ngFor="let item of proyectos; let indice=index" class="row" style="padding-bottom: 2em;">
+            <p class="h4">{{item.nombre}}</p>
+            <p class="h6">{{item.descripcion}}</p>
+            <p class="h6">{{item.anio}}</p>
+            <p class="h6">{{item.url_proyecto}}</p>
             <ul class="mdc-image-list my-image-list">
                 <li class="mdc-image-list__item">
                     <div class="mdc-image-list__image-aspect-container">
-                        <div *ngFor="let foto of item.image">
+                        <div *ngFor="let foto of item.url_images">
                             <img class="mdc-image-list__image" [src]=foto>
                         </div>
                     </div>
                     <div class="mdc-image-list__supporting">
-                        <span class="mdc-image-list__label"><p>{{item.name}}</p></span>
+                        <span class="mdc-image-list__label"><p>{{item.nombre}}</p></span>
                     </div>
                 </li>
                 
@@ -22,7 +22,8 @@
             
             <div>
                 <button *ngIf=recibologueado mat-mini-fab color="warn" type="button" data-bs-toggle="modal"
-                    data-bs-target="#proyectosModal" style="margin-right: 1em;">
+                    data-bs-target="#proyectosModal" style="margin-right: 1em;"
+                    (click)="mostrarProyectos(item)">
                     <mat-icon>edit</mat-icon>
                 </button>
                 <button *ngIf=recibologueado mat-mini-fab color="basic" type="button" data-bs-toggle="modal"

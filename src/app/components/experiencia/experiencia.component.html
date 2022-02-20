@@ -1,14 +1,15 @@
 <div class="container-fluid">
         <p class="h1 titulofluid">Experiencia</p>     
-            <div *ngFor="let item of experiencia" class="row" style="display: inline-flex; margin-left: 1em;">
+            <div *ngFor="let item of experiencia; let indice=index" class="row" style="display: inline-flex; margin-left: 1em;">
                 <div class="card" style="width: 18rem; display: inline-flex; margin-left: 5rem;margin-bottom: 3rem;justify-content:center;">
-                    <img [src]="item.image" class="card-img-top logo" alt="Logo" style="height:100px;">
+                    <img [src]="item.urlLogo" class="card-img-top logo" alt="Logo" style="height:100px;">
                     <div class="card-body">
-                        <p class="card-title" style="font-size: large; font-weight: 500;">{{item.rol}}</p>
-                        <p class="card-text">{{item.institute}}<br>Desde el año {{item.year}}</p>
-                        <a [href]="item.url" class="btn btn-primary" style="margin-right: 65px;" target="_blank">Ir a ver</a>
+                        <p class="card-title" style="font-size: large; font-weight: 500;">{{item.descripcion}}</p>
+                        <p class="card-text">{{item.nombreInstitucion}}<br>Desde el año {{item.fechaInicio}}</p>
+                        <a [href]="item.urlInstitucion" class="btn btn-primary" style="margin-right: 65px;" target="_blank">Ir a ver</a>
                         <button *ngIf=recibologueado mat-mini-fab color="warn" style="margin-right: 10px; justify-self: center"
-                        type="button" data-bs-toggle="modal" data-bs-target="#experienciaModal">
+                        type="button" data-bs-toggle="modal" data-bs-target="#experienciaModal"
+                        (click)="mostrarExperiencia(indice)">
                             <mat-icon>edit</mat-icon>
                         </button>
                         <button *ngIf=recibologueado mat-mini-fab color="basic"

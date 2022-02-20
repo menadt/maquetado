@@ -1,11 +1,11 @@
 {
-    "project": [
+    "proyecto": [
         {
-            "name": "Portfolio Personal",
-            "description": "Diseño y desarrollo del portfolio personal",
-            "url": "martinmenalled.com",
-            "year": "2022",
-            "image": ["https://www.freecodecamp.org/espanol/news/content/images/2020/11/image-27.png", "https://cdn-media-1.freecodecamp.org/images/1*RO6pcQdVb7zWXrqOr82x7g.png"]
+            "nombre": "Portfolio Personal",
+            "descripcion": "Diseño y desarrollo del portfolio personal",
+            "url_proyecto": "martinmenalled.com",
+            "anio": "2022",
+            "url_images": ["https://www.freecodecamp.org/espanol/news/content/images/2020/11/image-27.png", "https://cdn-media-1.freecodecamp.org/images/1*RO6pcQdVb7zWXrqOr82x7g.png"]
         
         }
     ]

@@ -29,7 +29,7 @@ form!: FormGroup;
 
   ngOnInit(): void {
   this.miservicio.getDatosExperiencia().subscribe(data =>{
-    this.experiencia = data ['work'];
+    this.experiencia = data ['experiencia'];
     
   })};
  guardarFormulario() {
@@ -66,5 +66,13 @@ form!: FormGroup;
   }
   get urlLogo() {
     return this.form.get("urlLogo");
+  }
+  mostrarExperiencia(item: any) {
+    this.form.get("nombreInstitucion")?.setValue(this.experiencia[item].nombreInstitucion);
+    this.form.get("fechaInicio")?.setValue(this.experiencia[item].fechaInicio);
+    this.form.get("descripcion")?.setValue(this.experiencia[item].descripcion);
+    this.form.get("urlInstitucion")?.setValue(this.experiencia[item].urlInstitucion);
+    this.form.get("urlLogo")?.setValue(this.experiencia[item].urlLogo);
+
   }
   }

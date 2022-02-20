@@ -1,18 +1,19 @@
 <div class="container-fluid">
         <p class="h1 titulofluid">Educación</p>
-            <div *ngFor="let item of educacion" class="row tarjeta">
+            <div *ngFor="let item of educacion; let indice=index" class="row tarjeta">
                     
                     <div class="col-3">
-                        <img [src]="item.image" alt="Logo" class="logo">
+                        <img [src]="item.urlInstitucion" alt="Logo" class="logo">
                     </div>
                     <div class="col">
-                        <p class="h4" style="font-weight:500;">{{item.title}}</p>
-                        <p class="h6">{{item.institute}}</p>                        
-                        <p class="h6" >Año: {{item.year}}</p>
+                        <p class="h4" style="font-weight:500;">{{item.titulo}}</p>
+                        <p class="h6">{{item.institucion}}</p>                        
+                        <p class="h6" >Año: {{item.anio}}</p>
                     </div>
                     <div class="col-1">
                         <button *ngIf=recibologueado mat-mini-fab color="warn"
-                        type="button" data-bs-toggle="modal" data-bs-target="#educacionModal">
+                        type="button" data-bs-toggle="modal" data-bs-target="#educacionModal"
+                        (click)="mostrarEducacion(indice)">
                         <mat-icon>edit</mat-icon>
                         </button>
                     </div>

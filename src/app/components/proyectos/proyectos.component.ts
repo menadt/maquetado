@@ -22,7 +22,7 @@ form!: FormGroup;
 
   ngOnInit(): void {
     this.miservicio.getDatosProyectos().subscribe(data=>{
-      this.proyectos=data["project"];
+      this.proyectos=data["proyecto"];
     })
   }
 
@@ -52,4 +52,11 @@ form!: FormGroup;
   get url(){
     return this.form.get("url");
   }
+
+  mostrarProyectos(item:any){
+    this.form.get("nombreProyecto")?.setValue(this.proyectos[item].nombre);
+    this.form.get('anio')?.setValue(this.proyectos[item].anio);
+    this.form.get("descripcion")?.setValue(this.proyectos[item].descripcion);
+    this.form.get("url")?.setValue(this.proyectos[item].url_proyecto);
+   }
 }

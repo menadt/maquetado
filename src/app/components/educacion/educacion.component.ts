@@ -29,7 +29,7 @@ export class EducacionComponent implements OnInit {
 
   ngOnInit(): void {
     this.miservicio.getDatosEducacion().subscribe(data => {
-      this.educacion = data["career"]
+      this.educacion = data["carrera"]
     })
   }
   guardarFormulario() {
@@ -65,4 +65,10 @@ export class EducacionComponent implements OnInit {
   get nombreInstitucion (){
     return this.form.get("nombreInstitucion");
   }
-}
+  mostrarEducacion(item: any){
+    this.form.get("titulo")?.setValue(this.educacion[item].titulo);
+    this.form.get("fechaFinal")?.setValue(this.educacion[item].anio);
+    this.form.get("nombreInstitucion")?.setValue(this.educacion[item].institucion);
+    this.form.get("logoInstitucion")?.setValue(this.educacion[item].urlInstitucion);
+    console.log(this.educacion[item].anio)
+}}
