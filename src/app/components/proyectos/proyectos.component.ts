@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { AccesoperfilService } from 'src/app/services/accesoperfil.service';
 import { environment } from 'src/environments/environment';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
-proyectos:any="";
+proyecto:any="";
 recibologueado:any =environment.logueado;
 form!: FormGroup;
   constructor(private miservicio:AccesoperfilService, private formBuilder: FormBuilder) { 
@@ -22,7 +23,7 @@ form!: FormGroup;
 
   ngOnInit(): void {
     this.miservicio.getDatosProyectos().subscribe(data=>{
-      this.proyectos=data["proyecto"];
+      this.proyecto = data["proyecto"];
     })
   }
 
@@ -43,7 +44,7 @@ form!: FormGroup;
   get nombreProyecto(){
     return this.form.get("nombreProyecto");
   }
-  get anio  (){
+  get anio(){
     return this.form.get("anio");
   }
   get descripcion(){
@@ -54,9 +55,9 @@ form!: FormGroup;
   }
 
   mostrarProyectos(item:any){
-    this.form.get("nombreProyecto")?.setValue(this.proyectos[item].nombre);
-    this.form.get('anio')?.setValue(this.proyectos[item].anio);
-    this.form.get("descripcion")?.setValue(this.proyectos[item].descripcion);
-    this.form.get("url")?.setValue(this.proyectos[item].url_proyecto);
+    this.form.get("nombreProyecto")?.setValue(this.proyecto[item].nombre);
+    this.form.get('anio')?.setValue(this.proyecto[item].anio);
+    this.form.get("descripcion")?.setValue(this.proyecto[item].descripcion);
+    this.form.get("url")?.setValue(this.proyecto[item].url_proyecto);
    }
 }

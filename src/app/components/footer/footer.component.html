@@ -3,32 +3,9 @@
         <a mat-mini-fab href="mailto:martinmenalled@gmail.com" target="_blank"><mat-icon>mail</mat-icon></a> 
     </li>
     <li class="nav-item">
-        <a mat-mini-fab href="https://api.whatsapp.com/send?phone=1159802100" target="_blank"><mat-icon>whatsapp</mat-icon></a>
+        <a mat-mini-fab href="https://api.whatsapp.com/send?phone=1159802100" target="_blank">
+        <mat-icon>whatsapp</mat-icon></a>
         
-    </li>
-    <li>
-        <button *ngIf=recibologueado mat-mini-fab color="warn" type="button" data-bs-toggle="modal" data-bs-target="#footerModal">
-            <mat-icon>edit</mat-icon>
-        </button>
     </li>
 </ul>
 
-
-<!-- Modal -->
-<div class="modal fade" id="footerModal" tabindex="-1" aria-labelledby="footerModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="footerModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>

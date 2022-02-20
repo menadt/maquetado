@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <p class="h1 titulofluid"> Proyectos</p>
     <mat-card style="background-color: transparent;">
-        <div *ngFor="let item of proyectos; let indice=index" class="row" style="padding-bottom: 2em;">
+        <div *ngFor="let item of proyecto; let indice=index" class="row" style="padding-bottom: 2em;">
             <p class="h4">{{item.nombre}}</p>
             <p class="h6">{{item.descripcion}}</p>
             <p class="h6">{{item.anio}}</p>
@@ -23,7 +23,7 @@
             <div>
                 <button *ngIf=recibologueado mat-mini-fab color="warn" type="button" data-bs-toggle="modal"
                     data-bs-target="#proyectosModal" style="margin-right: 1em;"
-                    (click)="mostrarProyectos(item)">
+                    (click)="mostrarProyectos(indice)">
                     <mat-icon>edit</mat-icon>
                 </button>
                 <button *ngIf=recibologueado mat-mini-fab color="basic" type="button" data-bs-toggle="modal"
@@ -102,10 +102,9 @@
             </div>
             <div class="modal-body">
                 <label for="confirmar" class="form-label">¿Estás Segurx?</label>
-                <input type="text" class="form-control" id="confirmar" formControlName="confirmar"></div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Guardar</button>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button></div>
+                <button type="button" class="btn btn-primary">Sí</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button></div>
         </div>
     </div>
 </div>
