@@ -20,4 +20,12 @@ public class Habilidad {
     String nombreHabilidad;
     Integer puntuacion;
     String descripcion;
+    public Habilidad() {
+    }
+    public Habilidad(Long idHabilidad, String nombreHabilidad, Integer puntuacion, String descripcion) {
+        this.idHabilidad = idHabilidad;
+        this.nombreHabilidad = nombreHabilidad;
+        this.puntuacion = puntuacion;
+        this.descripcion = descripcion;
+    }
 }
