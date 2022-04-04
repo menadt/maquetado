@@ -70,21 +70,28 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form [formGroup]="form">
+                <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                     <div class="mb-3">
                         <label for="nickName" class="form-label">Nombre de Usuario</label>
-                        <input type="text" class="form-control" id="nickName" formControlName="nickName">
-                
+                        <input type="text" class="form-control" id="nickName" formControlName="nickName"
+                        [ngClass]="{'is-invalid': nickName?.errors && (nickName?.touched), 'is-valid':!nickName?.errors && (nickName?.touched)}">                            
+                        <div *ngIf="nickName?.invalid && (nickName?.touched)" class="text-danger">
+                            Debe ingresar un usuario.
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="pass" class="form-label">Password</label>
-                        <input type="text" class="form-control" id="pass" formControlName="pass">
+                        <input type="text" class="form-control" id="pass" formControlName="pass"
+                        [ngClass]="{'is-invalid': pass?.errors && (pass?.touched), 'is-valid':!pass?.errors && (pass?.touched)}">                            
+                        <div *ngIf="pass?.invalid && (pass?.touched)" class="text-danger">
+                            Debe ingresar una contraseña
+                        </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Entrar</button>
+                <button type="button" class="btn btn-primary" (onclick)="onEnviar($event)">Entrar</button>
             </div>
         </div>
     </div>

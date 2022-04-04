@@ -53,7 +53,8 @@
                 <form [formGroup]="form">
                     <div class="mb-3">
                         <label for="nombreProyecto" class="form-label">Proyecto</label>
-                        <input type="text" class="form-control" id="nombreProyecto" formControlName="nombreProyecto" placeholder="Nombre del Proyecto">
+                        <input type="text" class="form-control" id="nombreProyecto" formControlName="nombreProyecto" placeholder="Nombre del Proyecto"
+                        [ngClass]="{'is-invalid': nombreProyecto?.errors && (nombreProyecto?.touched), 'is-valid':!nombreProyecto?.errors && (nombreProyecto?.touched)}">
                         <div *ngIf="nombreProyecto?.invalid && (nombreProyecto?.touched)" class="text-danger">
                             Debe completar un nombre para el proyecto.
                         </div>
