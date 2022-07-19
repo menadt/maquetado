@@ -17,12 +17,12 @@ public class Proyecto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long idProyecto;
     @Basic
-    String nombre;
-    String anio;
-    String descripcion;
-    String url1;
-    String url2;
-    String url3;
+    private String nombre;
+    private String anio;
+    private String descripcion;
+    private String url1;
+    private String url2;
+    private String url3;
 
     public Proyecto(Long idProyecto, String nombre, String anio, String descripcion, String url1, String url2,
             String url3) {

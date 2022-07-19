@@ -2,9 +2,6 @@ package com.portfolio.backend.Controller;
 
 import java.util.List;
 
-import com.portfolio.backend.Model.Carrera;
-import com.portfolio.backend.Service.CarreraService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,10 +11,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.portfolio.backend.Model.Carrera;
+import com.portfolio.backend.Service.ICarreraService;
+
 @RestController
 public class CarreraController {
+
     @Autowired
-    CarreraService carreraService;
+    ICarreraService carreraService;
 
     @GetMapping("/Carrera/{nombre}")
     public String saludar(@PathVariable String nombre) {
@@ -25,18 +26,18 @@ public class CarreraController {
     }
 
     @PostMapping("/Carrera")
-    public void crearPersona(@RequestBody Carrera carrera) {
+    public void crearCarrera(@RequestBody Carrera carrera) {
         carreraService.crearCarrera(carrera);
     }
 
     @DeleteMapping("/Carrera/{idCarrera}")
-    public void borrarPersona(@PathVariable Long idCarrera) {
+    public void borrarCarrera(@PathVariable Long idCarrera) {
         carreraService.borrarCarrera(idCarrera);
     }
 
     @GetMapping("/Carrera")
     @ResponseBody
-    public List<Carrera> listarPersonas() {
+    public List<Carrera> listarCarreras() {
         return carreraService.listarCarreras();
     }
 }

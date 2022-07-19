@@ -3,7 +3,7 @@ package com.portfolio.backend.Controller;
 import java.util.List;
 
 import com.portfolio.backend.Model.Persona;
-import com.portfolio.backend.Service.PersonaService;
+import com.portfolio.backend.Service.IPersonaService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PersonaController {
     @Autowired
-    PersonaService personaService;
+    IPersonaService ipersonaService;
 
     @GetMapping("/Persona/{nombre}")
     public String saludar(@PathVariable String nombre) {
@@ -26,17 +26,17 @@ public class PersonaController {
 
     @PostMapping("/Persona")
     public void crearPersona(@RequestBody Persona persona) {
-        personaService.crearPersona(persona);
+        ipersonaService.crearPersona(persona);
     }
 
     @DeleteMapping("/Persona/{id}")
     public void borrarPersona(@PathVariable Long id) {
-        personaService.borrarPersona(id);
+        ipersonaService.borrarPersona(id);
     }
 
     @GetMapping("/Persona")
     @ResponseBody
     public List<Persona> listarPersonas() {
-        return personaService.listarPersonas();
+        return ipersonaService.listarPersonas();
     }
 }

@@ -17,10 +17,10 @@ public class Persona {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     @Basic
-    String name;
-    String lastname;
-    String ubication;
-    String position;
+    private String name;
+    private String lastname;
+    private String ubication;
+    private String position;
 
     public Persona(Long id, String name, String lastname, String ubication, String position) {
         this.id = id;

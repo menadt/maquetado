@@ -17,11 +17,11 @@ public class Experiencia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long idExperiencia;
     @Basic
-    String Institucion;
-    Boolean esActual;
-    String fechaInicio;
-    String fechaFinal;
-    String descripcion;
+    private String Institucion;
+    private Boolean esActual;
+    private String fechaInicio;
+    private String fechaFinal;
+    private String descripcion;
 
     public Experiencia(Long idExperiencia, String institucion, Boolean esActual, String fechaInicio, String fechaFinal,
             String descripcion) {

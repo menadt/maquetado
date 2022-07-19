@@ -17,18 +17,16 @@ public class Carrera {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long idCarrera;
     @Basic
-    String titulo;
-    String lastname;
-    String fechaInicio;
-    String fechaFinal;
-    String institucion;
-    Boolean recibido;
+    private String titulo;
+    private String fechaInicio;
+    private String fechaFinal;
+    private String institucion;
+    private Boolean recibido;
 
-    public Carrera(Long idCarrera, String titulo, String lastname, String fechaInicio, String fechaFinal,
+    public Carrera(Long idCarrera, String titulo, String fechaInicio, String fechaFinal,
             String institucion, Boolean recibido) {
         this.idCarrera = idCarrera;
         this.titulo = titulo;
-        this.lastname = lastname;
         this.fechaInicio = fechaInicio;
         this.fechaFinal = fechaFinal;
         this.institucion = institucion;

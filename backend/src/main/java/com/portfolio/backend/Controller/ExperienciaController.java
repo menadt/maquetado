@@ -3,7 +3,7 @@ package com.portfolio.backend.Controller;
 import java.util.List;
 
 import com.portfolio.backend.Model.Experiencia;
-import com.portfolio.backend.Service.ExperienciaService;
+import com.portfolio.backend.Service.IExperienciaService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class ExperienciaController {
     @Autowired
-    ExperienciaService experienciaService;
+    IExperienciaService experienciaService;
 
     @GetMapping("/Experiencia/{experiencia}")
     public String saludar(@PathVariable String experiencia) {

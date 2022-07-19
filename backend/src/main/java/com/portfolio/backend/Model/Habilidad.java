@@ -17,11 +17,13 @@ public class Habilidad {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long idHabilidad;
     @Basic
-    String nombreHabilidad;
-    Integer puntuacion;
-    String descripcion;
+    private String nombreHabilidad;
+    private Integer puntuacion;
+    private String descripcion;
+
     public Habilidad() {
     }
+
     public Habilidad(Long idHabilidad, String nombreHabilidad, Integer puntuacion, String descripcion) {
         this.idHabilidad = idHabilidad;
         this.nombreHabilidad = nombreHabilidad;

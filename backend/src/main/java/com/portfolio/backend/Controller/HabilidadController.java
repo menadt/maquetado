@@ -3,7 +3,7 @@ package com.portfolio.backend.Controller;
 import java.util.List;
 
 import com.portfolio.backend.Model.Habilidad;
-import com.portfolio.backend.Service.HabilidadService;
+import com.portfolio.backend.Service.IHabilidadService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HabilidadController {
     @Autowired
-    HabilidadService habilidadService;
+    IHabilidadService habilidadService;
 
     @GetMapping("/Habilidad/{habilidad}")
     public String saludar(@PathVariable String habilidad) {
