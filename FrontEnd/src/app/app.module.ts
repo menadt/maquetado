@@ -22,6 +22,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ReactiveFormsModule } from '@angular/forms';
+import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 
 
@@ -38,6 +40,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BarraComponent,
     BannerComponent,
     FooterComponent,
+    IniciarSesionComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
